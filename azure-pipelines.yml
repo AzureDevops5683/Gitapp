@@ -36,9 +36,10 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'krishna5683'
     projectName: 'SonarCloud'
+- task: SonarCloudAnalyze@2
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'    
 - task: SonarCloudPublish@2
   inputs:
     pollingTimeoutSec: '300'
-- task: SonarCloudAnalyze@2
-  inputs:
-    jdkversion: 'JAVA_HOME_17_X64'
+
